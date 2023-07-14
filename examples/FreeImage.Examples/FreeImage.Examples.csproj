@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CDD2E85-F84E-401D-B275-3A684FECCBD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreeImage.Examples</RootNamespace>
+    <AssemblyName>FreeImage.Examples</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Threshold.resx">
+      <DependentUpon>Threshold.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Threshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Threshold.Designer.cs">
+      <DependentUpon>Threshold.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Fireball.CodeEditor.SyntaxFiles\Fireball.CodeEditor.SyntaxFiles.csproj">
+      <Project>{3814f627-858a-42a3-9aaf-cd649413f2a8}</Project>
+      <Name>Fireball.CodeEditor.SyntaxFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj">
+      <Project>{94bfa44a-f4d0-4605-88e6-3add498f5e16}</Project>
+      <Name>Fireball.CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Core\Fireball.Core.csproj">
+      <Project>{909ad284-7020-4fa9-a55e-7c633a641724}</Project>
+      <Name>Fireball.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Docking\Fireball.Docking\Fireball.Docking.csproj">
+      <Project>{d3c782ba-178e-4235-a3ba-8c11debb6bee}</Project>
+      <Name>Fireball.Docking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Plugins\Fireball.Plugins\Fireball.Plugins.csproj">
+      <Project>{582eb5e5-75f1-4bd4-8cdb-aec5f9e201b2}</Project>
+      <Name>Fireball.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Ssh\Fireball.Ssh\Fireball.Ssh.csproj">
+      <Project>{43b48f08-5432-411b-bf51-a5b541a63ce9}</Project>
+      <Name>Fireball.Ssh</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj">
+      <Project>{3f43bab0-22b4-4fd6-9655-8ba214a093a5}</Project>
+      <Name>Fireball.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Win32\Fireball.Win32\Fireball.Win32.csproj">
+      <Project>{a72d738d-b07f-4920-b4e7-543d18967fbf}</Project>
+      <Name>Fireball.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fireball.Windows.Forms\Fireball.Windows.Forms.csproj">
+      <Project>{0e253078-0afa-4b69-b27a-001b96735d60}</Project>
+      <Name>Fireball.Windows.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
