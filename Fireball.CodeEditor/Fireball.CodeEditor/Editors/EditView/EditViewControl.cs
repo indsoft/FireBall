@@ -1752,7 +1752,7 @@ namespace Fireball.Windows.Forms.CodeEditor
 
                 if (UseRegEx)
                 {
-                    Regex regex = new Regex(Pattern);
+					Regex regex = new Regex((MatchCase? "" : "(?i)") + Pattern);
                     int MatchCol = StartCol;
                     if (i == StartRow)
                     {
