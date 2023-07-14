@@ -141,7 +141,7 @@ namespace Fireball.Windows.Forms.CodeEditor
 			pnlReplaceButtons.Visible = false;
             this.Text = Localizations.FindDialogText;
 			this.Show();
-			this.Height = 160;
+			this.Height = 180;
 			btnDoReplace.Visible = false;
 			btnReplace.Visible = true;
 			_Last = "";
@@ -157,7 +157,7 @@ namespace Fireball.Windows.Forms.CodeEditor
 			pnlReplaceButtons.Visible = true;
             this.Text = Localizations.ReplaceDialogText;
 			this.Show();
-			this.Height = 200;
+			this.Height = 220;
 			btnDoReplace.Visible = true;
 			btnReplace.Visible = false;
 			_Last = "";
@@ -212,9 +212,9 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.pnlButtons.Controls.Add(this.pnlReplaceButtons);
             this.pnlButtons.Controls.Add(this.panel1);
             this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlButtons.Location = new System.Drawing.Point(381, 0);
+            this.pnlButtons.Location = new System.Drawing.Point(488, 0);
             this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(115, 178);
+            this.pnlButtons.Size = new System.Drawing.Size(115, 198);
             this.pnlButtons.TabIndex = 0;
             // 
             // panel3
@@ -224,7 +224,7 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 111);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(115, 67);
+            this.panel3.Size = new System.Drawing.Size(115, 87);
             this.panel3.TabIndex = 4;
             // 
             // btnClose
@@ -315,7 +315,7 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.pnlFind.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFind.Location = new System.Drawing.Point(0, 0);
             this.pnlFind.Name = "pnlFind";
-            this.pnlFind.Size = new System.Drawing.Size(381, 46);
+            this.pnlFind.Size = new System.Drawing.Size(488, 46);
             this.pnlFind.TabIndex = 1;
             // 
             // cboFind
@@ -350,7 +350,7 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.pnlReplace.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReplace.Location = new System.Drawing.Point(0, 46);
             this.pnlReplace.Name = "pnlReplace";
-            this.pnlReplace.Size = new System.Drawing.Size(381, 46);
+            this.pnlReplace.Size = new System.Drawing.Size(488, 46);
             this.pnlReplace.TabIndex = 2;
             this.pnlReplace.Visible = false;
             // 
@@ -384,7 +384,7 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.pnlSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSettings.Location = new System.Drawing.Point(0, 92);
             this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(381, 86);
+            this.pnlSettings.Size = new System.Drawing.Size(488, 106);
             this.pnlSettings.TabIndex = 3;
             // 
             // groupBox1
@@ -428,7 +428,7 @@ namespace Fireball.Windows.Forms.CodeEditor
             this.AcceptButton = this.btnFind;
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(496, 178);
+            this.ClientSize = new System.Drawing.Size(603, 198);
             this.Controls.Add(this.pnlSettings);
             this.Controls.Add(this.pnlReplace);
             this.Controls.Add(this.pnlFind);
