@@ -1744,7 +1744,7 @@ namespace Fireball.Windows.Forms.CodeEditor
 		{
 			string pattern = Pattern;
             int StartCol = this.Caret.Position.X;
-            int StartRow = this.Caret.Position.Y;
+			int StartRow = Math.Max(0, this.Caret.Position.Y - 1);
 
             for (int i = this.Caret.Position.Y; i < this.Document.Count; i++)
             {
