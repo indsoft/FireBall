@@ -1734,13 +1734,14 @@ namespace Fireball.Windows.Forms.CodeEditor
 			this.Redraw();
 		}
 
-		/// <summary>
-		/// Selects next occurance of the given pattern.
-		/// </summary>
-		/// <param name="Pattern">Pattern to find</param>
-		/// <param name="MatchCase">Case sensitive</param>
-		/// <param name="WholeWords">Match whole words only</param>
-		public bool SelectNext(string Pattern, bool MatchCase, bool WholeWords, bool UseRegEx)
+        /// <summary>
+        /// Selects next occurance of the given pattern.
+        /// </summary>
+        /// <param name="Pattern">Pattern to find</param>
+        /// <param name="MatchCase">Case sensitive</param>
+        /// <param name="WholeWords">Match whole words only</param>
+        /// <param name="UseRegEx">Use regular expressions</param>
+        public bool SelectNext(string Pattern, bool MatchCase, bool WholeWords, bool UseRegEx)
 		{
 			string pattern = Pattern;
             int StartCol = this.Caret.Position.X;
@@ -1752,7 +1753,7 @@ namespace Fireball.Windows.Forms.CodeEditor
 
                 if (UseRegEx)
                 {
-					Regex regex = new Regex((MatchCase? "" : "(?i)") + Pattern);
+					Regex regex = new Regex(Pattern, MatchCase ? RegexOptions.None : RegexOptions.IgnoreCase);
                     int MatchCol = StartCol;
                     if (i == StartRow)
                     {
